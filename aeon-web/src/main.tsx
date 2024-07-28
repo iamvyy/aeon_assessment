@@ -5,11 +5,17 @@ import "../src/app/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ErrorPage from "./app/pages/ErrorPage.tsx";
+import Calculator from "./app/pages/Calculator.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/calculator",
+    element: <Calculator />,
     errorElement: <ErrorPage />,
   },
 ]);
